@@ -18,9 +18,9 @@
 | 스킬 | 폴더 | 하는 일 | 부르는 에이전트 |
 |---|---|---|---|
 | content-interview | `.claude/skills/content-interview/` | 기획 인터뷰 기준·브리프 서식·이벤트 혜택 기획·썸네일 변주·숏폼 문법 | content-planner |
-| reel-ad-set | `.claude/skills/reel-ad-set/` | 레퍼런스 조사표 추출, 유형 판정, 원본 카피 풀, 릴스·광고 세트 기획 | reel-ad-producer |
-| product-reel | `.claude/skills/product-reel/` | reel.yaml 한 장으로 첫 프레임 프롬프트 → 영상 생성(승인 후) → 편집 MP4 (python·ffmpeg 필요) | visual-director, reel-ad-producer |
-| channel-set | `.claude/skills/channel-set/` | campaign.yaml 한 장으로 채널별 이미지 출력과 자동 검사 (python 필요) | visual-director, reel-ad-producer |
+| reel-ad-set (참석자 전용 저장소) | `.claude/skills/reel-ad-set/` | 레퍼런스 조사표 추출, 유형 판정, 원본 카피 풀, 릴스·광고 세트 기획 | reel-ad-producer |
+| product-reel (참석자 전용 저장소) | `.claude/skills/product-reel/` | reel.yaml 한 장으로 첫 프레임 프롬프트 → 영상 생성(승인 후) → 편집 MP4 (python·ffmpeg 필요) | visual-director, reel-ad-producer |
+| channel-set (참석자 전용 저장소) | `.claude/skills/channel-set/` | campaign.yaml 한 장으로 채널별 이미지 출력과 자동 검사 (python 필요) | visual-director, reel-ad-producer |
 | lint | `.claude/skills/lint/` | 저장소 전체 점검 체크리스트 | brand-auditor |
 
 ## 읽기·쓰기 권한

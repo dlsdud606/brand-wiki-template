@@ -8,13 +8,9 @@
 
 새 콘텐츠·멀티채널 세트 요청은 `.claude/skills/content-interview/SKILL.md`의 기획 인터뷰부터 진행한다. 담당은 `content-planner`. 요청에 이미 있는 답은 재질문하지 않고, 핵심 카피를 원본 문장에서 가져올지는 원본 후보를 보여 주고 매번 묻는다. 무응답은 승인이 아니다.
 
-## 채널 세트와 릴스
+## 채널 세트와 릴스·광고 세트
 
-한 캠페인을 여러 채널 이미지로 한 번에 만들 때는 `.claude/skills/channel-set/SKILL.md`, 제품 릴스는 `.claude/skills/product-reel/SKILL.md`를 읽는다. 둘 다 python 스크립트가 필요하고 크레딧이 드는 생성은 사람 승인 뒤에만 한다.
-
-## 릴스·메타 광고 세트
-
-레퍼런스 릴스 조사(`raw/reference-reels/`)에 기대어 제품 하나의 릴스·메타 광고 세트를 만들 때는 `.claude/skills/reel-ad-set/SKILL.md`를 읽는다. 담당은 `reel-ad-producer`. 레퍼런스에서는 유형과 영상 표현 방식만 가져오고, 제목·자막은 자사 원본 카피만 쓴다. 반응 천장이 높아도 AI로 품질이 안 나오는 유형(아이 먹방·상황극·전문가)은 생성하지 않는다.
+채널 세트 출력(`channel-set`), 제품 릴스(`product-reel`), 릴스·메타 광고 세트(`reel-ad-set`)와 담당 에이전트 `reel-ad-producer`는 참석자 전용 저장소(brand-wiki-template-pro)에 있다. 설치되어 있으면 `.claude/skills/<이름>/SKILL.md`를 읽고, 없으면 기획·콘티·campaign.yaml 초안까지만 진행하고 제작은 사람에게 넘긴다. 크레딧이 드는 생성은 사람 승인 뒤에만 한다.
 
 ## 폴더 구조
 
@@ -26,7 +22,7 @@
 - `05_channels/` 채널별 카피 가이드
 - `deliverables/` 검토 전 초안
 - `templates/` 서식
-- `.claude/agents/` 에이전트 6종(content-planner·researcher·copywriter·visual-director·reel-ad-producer·brand-auditor), `.claude/skills/` 스킬 5종(content-interview·reel-ad-set·product-reel·channel-set·lint)
+- `.claude/agents/` 에이전트 5종(content-planner·researcher·copywriter·visual-director·brand-auditor), `.claude/skills/` 스킬 2종(content-interview·lint). 제작용 스킬 3종(channel-set·product-reel·reel-ad-set)과 reel-ad-producer는 참석자 전용 저장소에서 같은 경로에 추가한다
 
 ## 절대 규칙 R1~R6
 

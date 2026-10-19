@@ -1,6 +1,6 @@
 # Brand-Wiki Template
 
-Brand-Wiki는 브랜드 콘텐츠를 만드는 팀원들이 AI와 함께 작성하고 관리하며, AI 에이전트로 콘텐츠를 제작할 때 읽히는 브랜드 지식 베이스입니다. 이 저장소는 그 지식 베이스를 처음 만들 때 쓰는 빈 틀입니다. 브랜드 사실·실제 카피·표현 기준·검수 절차를 파일로 정리해 두면, 같은 폴더에 들어 있는 에이전트 6종과 스킬 5종이 그 파일을 읽어 기획·제작·검수를 진행합니다.
+Brand-Wiki는 브랜드 콘텐츠를 만드는 팀원들이 AI와 함께 작성하고 관리하며, AI 에이전트로 콘텐츠를 제작할 때 읽히는 브랜드 지식 베이스입니다. 이 저장소는 그 지식 베이스를 처음 만들 때 쓰는 빈 틀입니다. 브랜드 사실·실제 카피·표현 기준·검수 절차를 파일로 정리해 두면, 같은 폴더에 들어 있는 에이전트와 스킬이 그 파일을 읽어 기획·제작·검수를 진행합니다.
 
 - 내용은 비어 있습니다. `[ ]` 칸을 자기 브랜드 자료로 채워서 씁니다
 - 특정 브랜드의 자료나 사례는 들어 있지 않습니다
@@ -57,7 +57,7 @@ Brand-Wiki는 브랜드의 사실·실제 카피·표현 기준·검수 절차�
 
 ### 하네스, 에이전트, 스킬
 
-- 에이전트는 역할입니다. 기획·조사·카피·비주얼·릴스·검수 6종이 있습니다
+- 에이전트는 역할입니다. 이 저장소에는 기획·조사·카피·비주얼·검수 5종이 있고, 릴스·광고 세트 담당은 참석자 전용 저장소에 있습니다
 - 스킬은 절차와 서식입니다. 인터뷰 질문, 브리프 양식, 편집기 템플릿, 점검 체크리스트가 여기에 들어갑니다
 - 하네스는 작업 순서·도구·검수 기준·권한을 정해 반복 업무를 같은 절차로 이어가게 하는 운영 구조입니다. 규칙이 많다고 품질이 좋아지지는 않으므로 핵심 규칙은 `CLAUDE.md`에 짧게 두고 상세 절차는 스킬 파일로 나눕니다
 
@@ -189,8 +189,8 @@ raw/products/에 새로 넣은 표시사항 이미지를 판독해 deliverables/
 [ Layer 2  Persona & Rule ]  02_governance/     역할 프롬프트·가드레일·Do's & Don'ts
           │                   CLAUDE.md · AGENTS.md   에이전트가 매 대화에 읽는 지침
 [ Layer 3  Orchestration  ]  03_orchestration/  파이프라인·에이전트 역할표
-          │                   .claude/agents/    실행용 에이전트 6종
-          │                   .claude/skills/    인터뷰·제작·검수 스킬 5종
+          │                   .claude/agents/    실행용 에이전트 5종
+          │                   .claude/skills/    인터뷰·점검 스킬 2종 (제작 스킬 3종은 참석자 전용)
 [ Layer 4  Human-in-Loop  ]  04_human-review/   검수 체크리스트·개입 스위치표·승격 규칙
           │                   deliverables/      검토 전 초안과 결과
           └─ 05_channels/     채널별 제작 기준
@@ -291,18 +291,16 @@ brand/approved-claims.md에는 승인 후보·근거·사용 조건만 제안하
 | researcher | `.claude/agents/researcher.md` | raw·위키에서 근거 수집, 부족분만 웹 | 위키 승격 판정 |
 | copywriter | `.claude/agents/copywriter.md` | 근거에 맞는 카피와 근거표 | 근거 밖 사실 |
 | visual-director | `.claude/agents/visual-director.md` | 비주얼 브리프·콘티, 승인 뒤 생성 | 후보 카피로 생성 |
-| reel-ad-producer | `.claude/agents/reel-ad-producer.md` | 레퍼런스 유형 판정, 릴스·광고 세트 기획 | 타사 소재 차용 |
 | brand-auditor | `.claude/agents/brand-auditor.md` | 팩트·표현·브랜드 기준 판정. 읽기 전용 | 파일 수정·발행 판단 |
 
 | 스킬 | 하는 일 | 준비물 |
 |---|---|---|
 | content-interview | 기획 인터뷰 기준, 브리프 서식, 이벤트 혜택 기획, 썸네일 변주 | 없음 |
-| reel-ad-set | 레퍼런스 조사표 추출, 유형 판정, 원본 카피 풀, 세트 기획 | 없음 |
 | lint | 위키 전체 점검. 수정하지 않고 PASS·FAIL·확인 필요만 보고 | 없음 |
-| channel-set | campaign.yaml 한 장으로 채널별 이미지 출력과 자동 검사 | python |
-| product-reel | reel.yaml 한 장으로 첫 프레임 → 영상 생성 → 편집 MP4 | python · ffmpeg · 생성 도구 크레딧 |
 
-정의 파일이 있다고 해서 6종이 동시에 실행되지는 않습니다. 도구가 에이전트를 자동으로 부르지 않으면 같은 순서를 한 대화에서 역할별로 수행합니다.
+제작용 스킬 3종(channel-set·product-reel·reel-ad-set)과 릴스·광고 세트 담당 에이전트 reel-ad-producer는 워크숍 참석자 전용 저장소 brand-wiki-template-pro로 제공합니다. 받은 폴더를 이 저장소의 `.claude/` 아래 같은 경로에 넣으면 지침이 그대로 연결됩니다.
+
+정의 파일이 있다고 해서 여러 에이전트가 동시에 실행되지는 않습니다. 도구가 에이전트를 자동으로 부르지 않으면 같은 순서를 한 대화에서 역할별로 수행합니다.
 
 ## 검수와 승격
 
@@ -362,7 +360,7 @@ git 명령이 익숙하지 않으면 AI에게 맡기고, 사람은 바뀐 파일
 ## 도구 메모
 
 - 위키 작성·인터뷰·기획·검수는 추가 설치 없이 됩니다
-- `channel-set`·`product-reel`과 레퍼런스 조사표 추출은 python이 필요하고, 릴스 편집은 ffmpeg가 필요합니다
+- 참석자 전용 제작 스킬(channel-set·product-reel·reel-ad-set)은 python이 필요하고, 릴스 편집은 ffmpeg가 필요합니다
   - macOS: `brew install python ffmpeg` 뒤 `pip3 install pyyaml pillow numpy opencv-python`
   - Windows: python.org 설치 프로그램에서 「Add to PATH」 체크 → `winget install Gyan.FFmpeg` → `pip install pyyaml pillow numpy opencv-python`
   - 확인: `python3 --version`, `ffmpeg -version`
@@ -393,3 +391,10 @@ git 명령이 익숙하지 않으면 AI에게 맡기고, 사람은 바뀐 파일
 | 4 | `04_human-review/` | 발행 전 검수·개입 스위치표·승격 규칙 |
 | 채널 | `05_channels/` | 채널 매트릭스와 채널별 문서 |
 | 서식 | `templates/` | 브리프·카피 규칙·운영 기준서 서식 |
+
+## 만든 사람과 라이선스
+
+- 만든 사람: 박인영 (Inyoung Park) · 사이버한국외대 경영학부 · [github.com/dlsdud606](https://github.com/dlsdud606)
+- 「Agentic AI 콘텐츠 생산의 출발점, Brand-Wiki」 워크숍(CMS 2026)의 교육 자료입니다
+- 라이선스: [CC BY-NC-SA 4.0](LICENSE). 출처를 표기하면 비영리 목적으로 쓰고 바꿀 수 있고, 바꾼 것은 같은 조건으로 공개합니다. 자기 브랜드 위키를 이 틀로 채워 사내에서 쓰는 것은 제한하지 않습니다. 유료 강의·컨설팅 등 상업적 이용은 별도 허락이 필요합니다
+- 포함 서체는 각 서체의 라이선스를 따릅니다
