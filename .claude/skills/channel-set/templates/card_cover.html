@@ -1,0 +1,11 @@
+<!-- 인스타 카드뉴스 표지 1080×1350. 슬롯: sub, head, line. 자산: logo, pack(3개: 왼쪽·오른쪽·가운데 앞), bg(선택, 생성 배경) -->
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>{{id}}</title><link rel="stylesheet" href="../assets/card.css"><style>
+.c{background:{{#asset_bg}}url("../assets/{{asset_bg}}") center/cover,{{/asset_bg}}linear-gradient(180deg,#C9E2F1 0%,#D8EAF4 55%,#EEF6FA 84%,#7ABA42 84%)}
+.txt{position:absolute;left:0;right:0;top:170px;text-align:center}
+.txt .sub{font-size:44px}.txt .head{margin-top:14px;font-size:96px}
+.txt .line{margin-top:26px;font-size:40px;font-weight:700;color:#6FAE43}
+.blue{left:120px;top:690px;height:470px}.pump{right:120px;top:690px;height:470px}.apple{left:50%;transform:translateX(-50%);top:640px;height:540px;z-index:2}
+</style><div class="c"><img class="logo" src="../assets/{{asset_logo}}">
+<div class="txt"><div class="sub">{{sub}}</div><div class="head">{{head}}</div><div class="line">{{line}}</div></div>
+{{packs_html}}
+<div class="notice" id="notice">{{notice}}</div></div></html>

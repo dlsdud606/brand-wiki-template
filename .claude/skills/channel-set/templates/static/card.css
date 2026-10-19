@@ -1,0 +1,11 @@
+*{box-sizing:border-box}body{margin:0}
+.c{position:relative;width:1080px;height:1350px;overflow:hidden;background:#FFFAF4;font-family:"Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:#2b2420;word-break:keep-all}
+.logo{position:absolute;left:64px;top:56px;height:44px}
+.page{position:absolute;right:64px;top:62px;font-size:28px;font-weight:700;color:#9a8f86}
+.label{display:inline-block;font-size:32px;font-weight:800;color:#fff;background:#6FAE43;border-radius:40px;padding:10px 30px}
+.head{font-size:72px;font-weight:900;color:#503629;letter-spacing:-1.5px;line-height:1.22}
+.sub{font-size:40px;font-weight:600;color:#4a403a;line-height:1.5}
+.body{font-size:36px;color:#4a403a;line-height:1.6}
+.note{position:absolute;left:64px;right:64px;bottom:44px;font-size:26px;line-height:1.5;color:#6b605a}
+.notice{position:absolute;right:64px;bottom:44px;font-size:26px;color:#5f5750;background:rgba(255,255,255,.7);border-radius:8px;padding:2px 10px}
+.pack{position:absolute;filter:drop-shadow(0 18px 22px rgba(70,60,40,.18))}

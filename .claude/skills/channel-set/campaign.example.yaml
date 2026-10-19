@@ -1,0 +1,37 @@
+# 채널 세트 설정 견본. 캠페인 폴더(deliverables/content/<건명>/)에 campaign.yaml로 복사해 고친다
+# 경로는 이 파일이 있는 캠페인 폴더 기준
+name: <캠페인 이름>
+brief: 00_브리프.md
+product: {name: <제품명>, doc: 01_knowledge/products/<제품>.md}
+out_dir: out
+
+facts:
+  period: {value: "YYYY.MM.DD ~ YYYY.MM.DD", status: 확정}   # 확정 / 제안 / 미정
+  benefit: {value: <혜택 문구>, status: 확정}
+  price: {value: null, status: 미정}
+
+decisions:                       # 사람이 정한 것만. 비어 있으면 할인율 문구는 게시 불가로 검사됨
+  discount_price:
+    mobile_main: landing         # landing(연결 랜딩에서 정가·할인가 병기) / in_image(이미지에 price_regular·price_sale 슬롯)
+
+copy:                            # 화면 문구 등록부. source 필수, 효능·운영 표현은 basis에 C-xx
+  badge_event: {text: EVENT, source: <기준 캠페인 또는 원본 경로>}
+  benefit: {text: <혜택 문구>, source: <출처>}
+  period: {text: "YYYY.MM.DD ~ YYYY.MM.DD", source: <출처>}
+  sub_original: {text: <원본 문장>, source: "raw/products/<제품>/<파일> 원문"}
+  product_name: {text: <제품명>, source: <출처>, basis: [제품 정보]}
+
+ad_copy:                         # 메타 광고 관리자 입력 문구 (선택)
+  primary_feed: <125자 이내>
+  primary_reel: <44자 이내>
+  headline: <27자 이내>
+
+assets:                          # 자산 등록부. 릴스 자산은 import-reel로 추가
+  pouch: {path: <누끼 PNG 경로>, kind: cutout, notice: 패키지 이미지 예시}
+  # bg: {path: <생성 배경>, kind: generated, notice: AI 생성 배경, crops: {720x700: [x0, y0, x1, y1]}}
+
+outputs:
+  - {id: mobile_main_A, channel: mobile_main, template: mobile_main_sky, assets: {pack: pouch},
+     slots: {badge: "@badge_event", subl: "@benefit", head1: "@sub_original", head2: "@product_name", chip: "@period"}}
+  - {id: meta_feed_A, channel: meta_feed, template: meta_feed_product, assets: {pack: pouch},
+     slots: {badge: "@badge_event", sub: "@sub_original", head: "@product_name", under: "@benefit"}}

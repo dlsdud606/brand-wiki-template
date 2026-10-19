@@ -1,0 +1,12 @@
+<!-- 인스타 카드뉴스 사진+설명 1080×1350. 슬롯: page, label, head, body, store. 자산: logo, photo -->
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>{{id}}</title><link rel="stylesheet" href="../assets/card.css"><style>
+.top{position:absolute;left:64px;right:64px;top:150px}.top .head{margin-top:26px}
+.photo{position:absolute;left:64px;top:410px;width:430px;height:588px;border-radius:32px;overflow:hidden;background:#fff}.photo img{width:100%;height:100%;object-fit:cover}
+.side{position:absolute;left:540px;right:64px;top:450px}.side .body{font-size:36px}
+.store{position:absolute;left:64px;right:64px;top:1010px;background:#EAF4FA;border-radius:28px;padding:30px 36px;font-size:32px;line-height:1.55;color:#3c4a52}
+</style><div class="c"><img class="logo" src="../assets/{{asset_logo}}"><div class="page">{{page}}</div>
+<div class="top"><span class="label">{{label}}</span><div class="head">{{head}}</div></div>
+<div class="photo"><img src="../assets/{{asset_photo}}"></div>
+<div class="side"><div class="body">{{body}}</div></div>
+<div class="store">{{store}}</div>
+<div class="notice">{{notice}}</div></div></html>

@@ -1,0 +1,13 @@
+<!-- 랜딩 05 보관·안내. 슬롯: sub, head, body, info([라벨, 값]), button, caution([문구], 선택: 원본 관례의 진회색 유의사항 블록) -->
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>{{id}}</title><style>*{box-sizing:border-box}body{margin:0}.c{position:relative;width:{{w}}px;height:{{h}}px;overflow:hidden;font-family:"Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:#1f1f1f;word-break:keep-all}.badge{display:inline-block;color:#fff;font-weight:800;font-size:30px;border-radius:12px;padding:8px 22px;background:linear-gradient(90deg,#FE8536,#F05656)}.sub{font-size:34px;font-weight:600;color:#444}.head{font-size:64px;font-weight:900;letter-spacing:-1.5px;line-height:1.22}.body{font-size:32px;line-height:1.6;color:#3a3a3a}.pack{position:absolute;filter:drop-shadow(0 22px 26px rgba(60,40,30,.22))}.notice{position:absolute;right:40px;bottom:24px;font-size:22px;font-weight:600;color:#3d3d3d;background:rgba(255,255,255,.8);border-radius:6px;padding:2px 10px}.ctr{position:absolute;left:80px;right:80px;text-align:center}.btn{display:inline-block;margin-top:36px;padding:22px 90px;border-radius:44px;background:#2F6B45;color:#fff;font-size:34px;font-weight:800}
+.c{background:#F6F2EC}
+.ctr{top:80px}.ctr .head{margin-top:12px}.ctr .body{margin-top:20px}
+.info{position:absolute;left:80px;right:80px;top:420px;background:#fff;border-radius:28px;padding:16px 40px}
+.info div{display:flex;gap:30px;padding:20px 0;border-top:1px solid #EEE6DC;font-size:28px;line-height:1.45}.info div:first-child{border-top:none}
+.info b{flex:none;width:300px;color:#503629}.info span{color:#3a3a3a}
+.cta{position:absolute;left:0;right:0;top:{{cta_top}}px;text-align:center}
+.caution{position:absolute;left:0;right:0;bottom:0;background:#383838;color:#eee;padding:44px 80px 50px;font-size:26px;line-height:1.6}.caution b{display:block;margin-bottom:12px;font-size:30px;color:#fff}
+</style><div class="c">
+<div class="ctr"><div class="sub">{{sub}}</div><div class="head">{{head}}</div><div class="body">{{body}}</div></div>
+<div class="info">{{info_html}}</div>
+<div class="cta"><span class="btn">{{button}}</span></div>{{#caution_html}}<div class="caution"><b>꼭 확인해 주세요</b>{{caution_html}}</div>{{/caution_html}}</div></html>

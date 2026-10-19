@@ -1,0 +1,50 @@
+{
+  "collected_on": "2026-10-18",
+  "fonts": [
+    {
+      "id": "maru-buri",
+      "name": "마루 부리",
+      "weight": "SemiBold",
+      "file": "MaruBuri-SemiBold.ttf",
+      "family": "MaruBuri",
+      "official_url": "https://hangeul.naver.com/fonts/search?f=maru",
+      "download_url": "https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.ttf",
+      "license_url": "https://help.naver.com/service/30016/contents/18088?osType=PC&lang=ko",
+      "license_file": "MaruBuri-LICENSE.txt",
+      "path": "assets/fonts/MaruBuri-SemiBold.ttf",
+      "collected_on": "2026-10-18",
+      "sha256": "2d86f0b4950955fb69f069c415d01a51bbbbcf03682d59a6adab7f5b05d16fe5",
+      "license_path": "assets/fonts/licenses/MaruBuri-LICENSE.txt"
+    },
+    {
+      "id": "bm-jua",
+      "name": "배민 주아체",
+      "weight": "Regular",
+      "file": "Jua-Regular.ttf",
+      "family": "Jua",
+      "official_url": "https://www.woowahan.com/fonts",
+      "download_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/jua/Jua-Regular.ttf",
+      "license_url": "https://www.woowahan.com/fonts/license",
+      "license_file": "Jua-OFL.txt",
+      "path": "assets/fonts/Jua-Regular.ttf",
+      "collected_on": "2026-10-18",
+      "sha256": "769677aef240bfc3b9965f2b50748075bff885e6c6992fc591a3fb268279f898",
+      "license_path": "assets/fonts/licenses/Jua-OFL.txt"
+    },
+    {
+      "id": "gmarket-sans",
+      "name": "Gmarket Sans",
+      "weight": "Bold",
+      "file": "GmarketSansTTFBold.ttf",
+      "family": "Gmarket Sans TTF",
+      "official_url": "https://gds.gmarket.co.kr/foundation/typography",
+      "download_url": "https://corp.gmarket.com/fonts/GmarketSansTTF.zip",
+      "license_url": "https://corp.gmarket.com/fonts/",
+      "license_file": "GmarketSans-LICENSE.txt",
+      "path": "assets/fonts/GmarketSansTTFBold.ttf",
+      "collected_on": "2026-10-18",
+      "sha256": "ff7c354dd1a324e4cecc1223c4f71e74fa81be7027e0c7f6324c475909cacefc",
+      "license_path": "assets/fonts/licenses/GmarketSans-LICENSE.txt"
+    }
+  ]
+}

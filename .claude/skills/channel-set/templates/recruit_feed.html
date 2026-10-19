@@ -1,0 +1,26 @@
+<!-- 인스타 체험단 모집 피드 1080×1350. 슬롯: badge, head, name, flavors, ask, bar. 자산: logo, pack(3개, 위에서부터). 이미지 안 날짜·가격 없음 -->
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>{{id}}</title><style>
+*{box-sizing:border-box}body{margin:0}
+.c{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:"Apple SD Gothic Neo","Noto Sans KR",sans-serif;color:#2b2420;word-break:keep-all;background:linear-gradient(180deg,#C9E2F1 0%,#D8EAF4 62%,#EEF6FA 100%)}
+.cloud{position:absolute;background:#fff;border-radius:50%;opacity:.9}
+.logo{position:absolute;left:64px;top:56px;height:46px}
+.badge{position:absolute;left:64px;top:150px;font-size:34px;font-weight:800;color:#fff;background:#6FAE43;border-radius:40px;padding:12px 32px}
+.head{position:absolute;left:64px;top:250px;width:560px;font-size:66px;font-weight:800;line-height:1.3;color:#503629}
+.head u{text-decoration:none;border-bottom:4px solid #503629}
+.name{position:absolute;left:64px;top:560px;width:560px;font-size:82px;font-weight:900;line-height:1.18;letter-spacing:-2px;color:#2b2420}
+.flavors{position:absolute;left:64px;top:780px;font-size:36px;font-weight:600;color:#4a403a;line-height:1.6}
+.ask{position:absolute;left:64px;top:960px;width:560px;font-size:38px;font-weight:700;line-height:1.45;color:#503629;background:rgba(255,255,255,.85);border-radius:24px;padding:24px 30px}
+.pack{position:absolute;width:300px;filter:drop-shadow(0 18px 22px rgba(60,70,90,.22))}
+.p1{right:70px;top:150px;transform:rotate(9deg)}.p2{right:150px;top:470px;transform:rotate(-7deg)}.p3{right:60px;top:790px;transform:rotate(6deg)}
+.bar{position:absolute;left:0;right:0;bottom:0;height:130px;background:#6FAE43;color:#fff;font-size:52px;font-weight:800;display:flex;align-items:center;justify-content:center;letter-spacing:-.5px}
+.notice{position:absolute;left:64px;bottom:146px;font-size:27px;font-weight:600;color:#3d4a52;background:rgba(255,255,255,.85);border-radius:8px;padding:3px 12px}
+</style><div class="c">
+<div class="cloud" style="left:540px;top:1080px;width:420px;height:120px"></div><div class="cloud" style="left:-60px;top:1150px;width:380px;height:110px"></div>
+<img class="logo" src="../assets/{{asset_logo}}"><div class="badge">{{badge}}</div>
+<div class="head">{{head}}</div>
+<div class="name">{{name}}</div>
+<div class="flavors">{{flavors}}</div>
+<div class="ask">{{ask}}</div>
+{{packs_html}}
+<div class="notice">{{notice}}</div>
+<div class="bar">{{bar}}</div></div></html>
